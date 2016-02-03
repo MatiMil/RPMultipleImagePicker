@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '6.0'
 
     s.public_header_files = 'RPMultiPicker/Classes/*.h'
-    s.source_files = 'RPMultiPicker/Classes/*.*'
-    s.resource = 'RPMultiPicker/Classes/RPMultipleImagePicker.xib'
+    s.source_files = 'RPMultiPicker/Classes/*.{h,m}'
+    s.resources = ['RPMultiPicker/Classes/RPMultipleImagePicker.xib']
 
     end
