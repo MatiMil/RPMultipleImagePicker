@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
 
     s.public_header_files = 'RPMultiPicker/Classes/*.h'
     s.source_files = 'RPMultiPicker/Classes/*.{h,m}'
-    s.resources = ['RPMultiPicker/Classes/RPMultipleImagePicker.xib']
+    s.resource = "RPMultiPicker/Classes/RPMultipleImagePicker.xib"
 
     end
