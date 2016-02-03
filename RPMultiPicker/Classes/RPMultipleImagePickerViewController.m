@@ -225,14 +225,20 @@
     if(self.doneCallback){
         self.doneCallback(self.images);
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIViewController *viewControllerToPopTo = self.navigationController.childViewControllers[1] ? self.navigationController.childViewControllers[1] : self.navigationController.childViewControllers[0];
+    
+    [self.navigationController popToViewController:viewControllerToPopTo animated:YES];
 }
 
 - (void) cancel
 {
     self.image = nil;
     self.images = nil;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIViewController *viewControllerToPopTo = self.navigationController.childViewControllers[1] ? self.navigationController.childViewControllers[1] : self.navigationController.childViewControllers[0];
+    
+    [self.navigationController popToViewController:viewControllerToPopTo animated:YES];
 }
 
 - (void) reloadCollectionView
