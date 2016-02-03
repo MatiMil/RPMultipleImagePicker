@@ -296,7 +296,12 @@
     if(indexPath.row == 0){
         
         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
-        [self presentViewController: self.pickerController animated:YES completion:nil];
+        if (self.customPickerController != nil) {
+            [self presentViewController:self.customPickerController animated:YES completion:nil];
+        }
+        else {
+            [self presentViewController: self.pickerController animated:YES completion:nil];
+        }
         
     }else{
         
@@ -333,7 +338,6 @@
         [picker dismissViewControllerAnimated:YES completion:nil];
         
     }
-    
 }
 
 #pragma mark - UI navigation bar delegate

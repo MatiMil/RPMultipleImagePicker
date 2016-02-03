@@ -16,6 +16,7 @@ typedef void (^ RPMultipleImagePickerDoneCallback)(NSArray *images);
 
 @property (nonatomic, copy) RPMultipleImagePickerDoneCallback doneCallback;
 @property (nonatomic, strong) UIImagePickerController *pickerController;
+@property (nonatomic, strong) id customPickerController;
 @property (nonatomic, strong) NSMutableArray *images;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) IBOutlet UIButton *btRemover;
