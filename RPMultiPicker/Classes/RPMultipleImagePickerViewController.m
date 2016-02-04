@@ -161,6 +161,7 @@
                     [self selectLastImage];
                     // Set Last Image to big picture
                     [self setCurrentImage:self.images[self.selectedIndex - 1]];
+                    [self refreshTitle];
                 });
             }
             
