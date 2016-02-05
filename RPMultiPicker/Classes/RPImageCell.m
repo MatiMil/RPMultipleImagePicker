@@ -50,7 +50,7 @@
 - (void)styleAddButton
 {
     text.hidden = NO;
-    self.layer.borderWidth = 1.0f;
+    self.layer.borderWidth = 2.0f;
     // Blue default color
     self.layer.borderColor = self.tintColor.CGColor;
 }
@@ -58,8 +58,8 @@
 - (void)setSelected:(BOOL)selected
 {
     if(selected){
-        self.layer.borderColor = [UIColor colorWithRed:0.0f green:150.0f/255.0f blue:1.0f alpha:1.0f].CGColor;
-        self.layer.borderWidth = 1.0f;
+        self.layer.borderColor = self.tintColor.CGColor;
+        self.layer.borderWidth = 3.0f;
     }else{
         self.layer.borderColor = [UIColor clearColor].CGColor;
         self.layer.borderWidth = 0.0f;
